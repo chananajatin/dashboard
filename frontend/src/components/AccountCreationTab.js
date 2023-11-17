@@ -44,7 +44,9 @@ const AccountCreationTab = () => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/users", { ...values });
+      await axios.post("https://dashboard-ohmd.onrender.com/api/users", {
+        ...values,
+      });
       console.log("Account created successfully");
       openNotification(
         "success",
